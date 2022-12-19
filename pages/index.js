@@ -20,7 +20,7 @@ export default function Home() {
           />
         </div>
         <h1 className="text-2xl text-gray-800 pb-4">
-          Google's list of most beautiful women of 2022
+          Google&apos;s list of most beautiful women of 2022
         </h1>
         <div>
           <ul className="list-decimal pl-4 text-xl font-semibold">
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
 
         <h1 className="text-2xl text-gray-800 pb-4">
-          Google's list of most kindest women of 2022
+          Google&apos;s list of most kindest women of 2022
         </h1>
         <div>
           <ul className="list-decimal pl-4 text-xl font-semibold">
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
 
         <h1 className="text-2xl text-gray-800 pb-4">
-          Google's list of most coolest women of 2022
+          Google&apos;s list of most coolest women of 2022
         </h1>
         <div>
           <ul className="list-decimal pl-4 text-xl font-semibold">
@@ -87,8 +87,8 @@ export default function Home() {
           </ul>
         </div>
         <p>
-          We tried getting photos too of the winner here but could'nt find any
-          suitable ones as winner is quite secretive as well.
+          We tried getting photos too of the winner here but could&apos;nt find
+          any suitable ones as winner is quite secretive as well.
         </p>
         <div className="pt-4 flex items-center">
           <div className="text-2xl">&copy;</div>
