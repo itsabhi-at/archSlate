@@ -2,8 +2,8 @@ import Image from "next/image";
 import logo from "../pages/assets/logo.png";
 function Navbar() {
   return (
-    <div>
-      <main className=" flex justify-between items-center px-4 py-2 shadow-md">
+    <div className="bg-white">
+      <main className=" flex justify-between items-center px-8 py-2 shadow-md">
         <div className=" flex gap-4">
           <Image src={logo} alt="logo" className=" object-contain" />
           <p className=" font-semibold font-lora text-[32px]">Archslate</p>
