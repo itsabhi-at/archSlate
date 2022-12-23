@@ -5,7 +5,7 @@ function Navbar() {
     <div className="bg-white">
       <main className=" flex justify-between items-center px-8 py-2 shadow-md">
         <div className=" flex gap-4">
-          <Image src={logo} alt="logo" className=" object-contain" />
+          <Image src={logo} alt="logo" className="object-contain" />
           <p className=" font-semibold font-lora text-[32px]">Archslate</p>
         </div>
         <ul className="flex gap-8 font-roboto font-bold text-[11px]">
