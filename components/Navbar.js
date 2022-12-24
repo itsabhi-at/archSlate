@@ -5,7 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import Link from "next/link";
 function Navbar() {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
 
   function HamburgerClick() {
     setMenu((prevState) => !prevState);
