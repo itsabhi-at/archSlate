@@ -4,10 +4,10 @@ import jobLogo from "./assets/jobLogo.png";
 import profilePic from "./assets/profilePic.png";
 function job() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 overflow-x-hidden ">
       <main className="container mx-auto lg:px-36 pt-8">
         <Link href={"/"}>
-          <div className="text-xl font-roboto font-bold w-fit flex items-center gap-2 mb-4">
+          <div className="text-xl font-roboto font-bold w-fit flex items-center gap-2 mb-4 px-4 md:px-4">
             <svg
               width="24"
               height="24"
@@ -33,12 +33,23 @@ function job() {
         </Link>
 
         {/* head card  */}
-        <section className="p-6 flex justify-between bg-white rounded-md mb-4 ">
+        <section className="p-6 flex flex-col md:flex-row justify-between bg-white rounded-md mb-4 mx-4 md:mx-0">
           {/* left side part  */}
           <div>
             <div className=" flex gap-4">
               {/* image  */}
-              <Image src={jobLogo} alt="logo" />
+              {/* <div className="">
+                <Image src={jobLogo} alt="logo" />
+              </div> */}
+              <div className="border border-black rounded-[3px] h-auto md:h-[162px] w-full md:w-[144px] relative flex items-center justify-center">
+                <Image
+                  src={jobLogo}
+                  alt="logo"
+                  fill
+                  className=" object-contain md:object-contain p-0 "
+                />
+              </div>
+
               {/* text part  */}
               <div className=" flex flex-col font-roboto">
                 <h1 className="font-bold text-[36px]">
@@ -48,7 +59,7 @@ function job() {
                 <p className="pt-2">Posted 07/27/2022</p>
               </div>
             </div>
-            <div className="flex gap-4 items-center mt-4">
+            <div className="flex gap-4 items-center mt-4 flex-wrap">
               <div className=" bg-black  text-white text-[14px] px-4 py-2 rounded-[40px] font-semibold ">
                 Architecture
               </div>
@@ -61,7 +72,7 @@ function job() {
             </div>
           </div>
           {/* right side part  */}
-          <div className="font-roboto flex flex-col items-end">
+          <div className="font-roboto flex flex-col items-start md:items-end mt-4">
             {/* svgs  */}
             <div className=" flex gap-4 items-center justify-end">
               <svg
@@ -129,7 +140,7 @@ function job() {
         </section>
         {/* ends here  */}
         {/* second cards row  */}
-        <section className="grid grid-cols-4 gap-8 mb-4">
+        <section className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-4 px-4 md:px-0 ">
           <div className="CARD-ONE  bg-white rounded-md p-4 min-h-[200px] ">
             <p className="HEADING font-semibold text-black text-lg flex gap-2 justify-center items-center mb-2 relative ">
               <svg
@@ -240,8 +251,8 @@ function job() {
         </section>
         {/* ends here  */}
         {/* third row  */}
-        <section className="grid grid-cols-4 gap-8 mb-4 font-roboto">
-          <div className="col-span-3 py-4 px-8 bg-white rounded-md mb-4 ">
+        <section className="grid  grid-cols-1 md:grid-cols-4  gap-8 mb-4 font-roboto px-4 md:px-0 ">
+          <div className="col-span-3 py-4 px-8 bg-white rounded-md mb-4">
             {/* desc part here  */}
             <div>
               <h1 className=" font-bold">About this role</h1>
@@ -299,7 +310,7 @@ function job() {
               </p>
             </div>
             {/* button here  */}
-            <div className="flex gap-4 items-center">
+            <div className="flex gap-4 items-center flex-wrap">
               <button className=" px-6 py-2 rounded-full text-white text-xl font-roboto font-bold bg-gradient-to-r from-[#F26A5C] to-orange-400 ">
                 Apply on Archslate
               </button>
@@ -371,7 +382,7 @@ function job() {
           </div>
           <div className="bg-white rounded-md mb-4 h-[200px] p-4 ">
             <h3 className="font-semibold text-lg pb-2">Job Poster</h3>
-            <div className="flex gap-2">
+            <div className="flex gap-4 md:gap-2">
               <div>
                 <Image src={profilePic} alt="profile" height={50} width={50} />
               </div>

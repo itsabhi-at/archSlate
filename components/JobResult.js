@@ -18,14 +18,18 @@ function JobResult({
             Status: {status}
           </div>
         )}
-        <div className="flex gap-4">
-          <div className="border border-black rounded-[3px] h-[162px] w-[144px] relative flex items-center justify-center">
-            <Image src={image} alt="logo" className="object-contain p-0 " />
+        <div className="flex gap-4 flex-col md:flex-row ">
+          <div className="border border-black rounded-[3px] h-[162px] w-full md:w-[144px] relative flex items-center justify-center">
+            <Image
+              src={image}
+              alt="logo"
+              className=" object-fill md:object-contain p-0 "
+            />
           </div>
           <div className="flex-1">
             {/* first line  */}
-            <div className="flex">
-              <div className="flex gap-4 items-center">
+            <div className="flex flex-wrap gap-4 md:gap-0">
+              <div className="flex flex-wrap gap-2 md:gap-4 items-center">
                 <div className=" bg-white  text-black text-[14px] px-4 py-2 rounded-[40px] font-semibold border-black border-[1.5px] ">
                   Architecture
                 </div>
@@ -41,7 +45,7 @@ function JobResult({
               </div>
 
               {/* svgs  */}
-              <div className=" flex flex-1 gap-4 items-center justify-end">
+              <div className=" flex-1 gap-4 items-center justify-start md:justify-end hidden md:flex">
                 <svg
                   width="28"
                   height="28"
@@ -121,12 +125,98 @@ function JobResult({
                 )}
               </div>
             </div>
-            <h1 className="font-bold text-[20px] pt-2">{position}</h1>
+            <div className="flex item-center justify-between gap-3">
+              <h1 className="font-bold text-[20px] pt-2 block md:hidden ">
+                {position}
+              </h1>
+              <div className="gap-4 items-center justify-start md:justify-end flex md:hidden">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.6654 9.33301L9.33203 12.833"
+                    stroke="black"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M18.6654 18.667L9.33203 15.167"
+                    stroke="black"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.0013 16.3337C8.28997 16.3337 9.33464 15.289 9.33464 14.0003C9.33464 12.7117 8.28997 11.667 7.0013 11.667C5.71264 11.667 4.66797 12.7117 4.66797 14.0003C4.66797 15.289 5.71264 16.3337 7.0013 16.3337Z"
+                    stroke="black"
+                    stroke-width="1.75"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M21.0013 10.4997C22.29 10.4997 23.3346 9.45501 23.3346 8.16634C23.3346 6.87768 22.29 5.83301 21.0013 5.83301C19.7126 5.83301 18.668 6.87768 18.668 8.16634C18.668 9.45501 19.7126 10.4997 21.0013 10.4997Z"
+                    stroke="black"
+                    stroke-width="1.75"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M21.0013 22.1667C22.29 22.1667 23.3346 21.122 23.3346 19.8333C23.3346 18.5447 22.29 17.5 21.0013 17.5C19.7126 17.5 18.668 18.5447 18.668 19.8333C18.668 21.122 19.7126 22.1667 21.0013 22.1667Z"
+                    stroke="black"
+                    stroke-width="1.75"
+                  />
+                </svg>
+                {saved ? (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 2H6C5.73478 2 5.48043 2.10536 5.29289 2.29289C5.10536 2.48043 5 2.73478 5 3V21C4.99999 21.1912 5.05477 21.3783 5.15785 21.5393C5.26094 21.7003 5.40801 21.8284 5.58164 21.9083C5.75527 21.9883 5.94819 22.0169 6.13754 21.9906C6.32688 21.9643 6.50473 21.8843 6.65 21.76L12 17.27L17.29 21.71C17.3834 21.8027 17.4943 21.876 17.6161 21.9258C17.7379 21.9755 17.8684 22.0008 18 22C18.1312 22.0034 18.2613 21.976 18.38 21.92C18.5626 21.845 18.7189 21.7176 18.8293 21.5539C18.9396 21.3901 18.999 21.1974 19 21V3C19 2.73478 18.8946 2.48043 18.7071 2.29289C18.5196 2.10536 18.2652 2 18 2ZM17 18.86L12.64 15.2C12.4603 15.0503 12.2339 14.9684 12 14.9684C11.7661 14.9684 11.5397 15.0503 11.36 15.2L7 18.86V4H17V18.86Z"
+                      fill="black"
+                    />
+                    <rect x="6" y="4" width="11" height="11" fill="black" />
+                    <path
+                      d="M5.89561 14.105L12.945 14.0366L6.19756 21.1482L5.89561 14.105Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M17.7958 14.105L10.7464 14.0366L17.4938 21.1482L17.7958 14.105Z"
+                      fill="black"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 2H6C5.73478 2 5.48043 2.10536 5.29289 2.29289C5.10536 2.48043 5 2.73478 5 3V21C4.99999 21.1912 5.05477 21.3783 5.15785 21.5393C5.26094 21.7003 5.40801 21.8284 5.58164 21.9083C5.75527 21.9883 5.94819 22.0169 6.13754 21.9906C6.32688 21.9643 6.50473 21.8843 6.65 21.76L12 17.27L17.29 21.71C17.3834 21.8027 17.4943 21.876 17.6161 21.9258C17.7379 21.9755 17.8684 22.0008 18 22C18.1312 22.0034 18.2613 21.976 18.38 21.92C18.5626 21.845 18.7189 21.7176 18.8293 21.5539C18.9396 21.3901 18.999 21.1974 19 21V3C19 2.73478 18.8946 2.48043 18.7071 2.29289C18.5196 2.10536 18.2652 2 18 2ZM17 18.86L12.64 15.2C12.4603 15.0503 12.2339 14.9684 12 14.9684C11.7661 14.9684 11.5397 15.0503 11.36 15.2L7 18.86V4H17V18.86Z"
+                      fill="black"
+                    />
+                  </svg>
+                )}
+              </div>
+            </div>
+            <h1 className="font-bold text-[20px] pt-2 hidden md:block ">
+              {position}
+            </h1>
             {/* third line */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between flex-wrap">
               <p className=" font-semibold">
                 {company}
-                <span className="px-4">|</span>
+                <br />
                 <span className=" font-normal">
                   <svg
                     className="inline-block"
@@ -153,7 +243,7 @@ function JobResult({
             </div>
             {/* fourth block  */}
             <div className="relative">
-              <p className="font-semibold pt-2 ">Skill Requirements</p>
+              <p className="font-semibold md:pt-2 py-3 ">Skill Requirements</p>
               <div className="flex gap-4 pt-[1px]">
                 <div className="flex bg-black  text-white text-[14px] px-6 py-[2px] rounded-[40px] font-semibold items-center justify-center">
                   Blender
@@ -166,7 +256,7 @@ function JobResult({
                 </div>
               </div>
               <Link href={"/job"}>
-                <button className="absolute bottom-0 right-0 px-8 py-2 rounded-full text-white text-xl leading-6 font-roboto font-bold bg-gradient-to-r from-[#F26A5C] to-orange-400 ">
+                <button className="my-3 w-full md:w-auto md:absolute bottom-0 right-0 px-8 py-2 rounded-full text-white text-xl leading-6 font-roboto font-bold bg-gradient-to-r from-[#F26A5C] to-orange-400 ">
                   Apply
                 </button>
               </Link>

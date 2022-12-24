@@ -1,7 +1,7 @@
 function SearchBar() {
   return (
     <>
-      <div className="flex pt-2">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-0 pt-2">
         {/* search bar */}
         <div className="flex-1">
           <form className="flex items-center">
