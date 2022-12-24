@@ -35,11 +35,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Tabs
+        {/* <Tabs
           contentOne={ContentOne}
           contentTwo={ContentTwo}
           contentThree={ContentThree}
-        />
+        /> */}
       </main>
     </div>
   );
@@ -150,6 +150,7 @@ export const ContentOne = () => {
       {/* ends here  */}
       {toggle ? (
         <>
+          <p className="font-medium py-2">261 Results</p>
           <JobResult
             image={dereus}
             position={"Designer"}
@@ -166,6 +167,7 @@ export const ContentOne = () => {
         </>
       ) : (
         <>
+          <p className="font-medium py-2">171 Results</p>
           <JobResult
             image={jobLogo}
             position={"Project Architect"}
