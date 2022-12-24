@@ -30,7 +30,7 @@ const tagData = [
 export default function Home() {
   return (
     <div className=" bg-gray-50">
-      <main className="overflow-x-hidden pt-4 md:pt-0 ">
+      <main className="overflow-x-hidden pt-16 md:pt-0 ">
         <Tabs
           contentOne={ContentOne}
           contentTwo={ContentTwo}
