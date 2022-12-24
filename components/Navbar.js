@@ -11,7 +11,7 @@ function Navbar() {
     setMenu((prevState) => !prevState);
   }
   return (
-    <div className="bg-white relative z-20 overflow-visible ">
+    <div className="bg-white relative z-20 ">
       <main className="DESKTOP-NAV hidden md:flex justify-between items-center px-8 py-2 shadow-md">
         <Link href={"/"}>
           <div className=" flex gap-4">
@@ -113,7 +113,7 @@ function Navbar() {
           </li>
         </ul>
       </main>
-      <main className="MOBILE-NAV relative flex md:hidden justify-between items-center px-8 py-2 shadow-md">
+      <main className="MOBILE-NAV relative flex md:hidden justify-between items-center px-8 py-2 shadow-md overflow-x-clip ">
         <Link href={"/"}>
           <div className=" flex gap-4">
             <Image src={logo} alt="logo" className="object-contain" />
@@ -122,11 +122,11 @@ function Navbar() {
         </Link>
         <div className="">
           <div
-            className={` absolute right-0  top-16 h-screen w-1/2  transition-all bg-orange-400 ${
+            className={` absolute right-0 z-50 top-16 h-screen w-1/2  transition-all bg-orange-400 ${
               menu ? "translate-x-0" : "translate-x-full"
             } `}
           >
-            <ul className="flex flex-col gap-8 font-roboto font-bold text-[11px] pt-4">
+            <ul className="flex flex-col gap-8 font-roboto font-bold text-[11px] pt-4 ">
               <li className="flex flex-col justify-center items-center cursor-pointer ">
                 <svg
                   width="24"
