@@ -1,22 +1,24 @@
 import React from "react";
 
-const Tabs = ({ children }) => {
+const Tabs = ({
+  contentOne: ContentOne,
+  contentTwo: ContentTwo,
+  contentThree: ContentThree,
+}) => {
   const [openTab, setOpenTab] = React.useState(1);
   return (
     <>
       <div className="flex flex-wrap">
         <div className="w-full">
           <ul
-            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
+            className=" bg-white flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row justify-center items-center gap-8 font-roboto"
             role="tablist"
           >
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li className="-mb-px last:mr-0 text-center w-fit   ">
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 1
-                    ? "text-white bg-blueGray-600"
-                    : "text-blueGray-600 bg-white")
+                  "text-lg font-bold uppercase px-5 py-3 block leading-normal w-full  " +
+                  (openTab === 1 ? " border-b-2  border-black " : " bg-white")
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -26,16 +28,14 @@ const Tabs = ({ children }) => {
                 href="#link1"
                 role="tablist"
               >
-                Profile
+                Search Jobs
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li className="-mb-px last:mr-0 text-center w-fit   ">
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 2
-                    ? "text-white bg-blueGray-600"
-                    : "text-blueGray-600 bg-white")
+                  "text-lg font-bold uppercase px-5 py-3 block leading-normal w-full  " +
+                  (openTab === 2 ? " border-b-2  border-black " : " bg-white")
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -45,16 +45,14 @@ const Tabs = ({ children }) => {
                 href="#link2"
                 role="tablist"
               >
-                Settings
+                Applied
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li className="-mb-px last:mr-0 text-center w-fit   ">
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 3
-                    ? "text-white bg-blueGray-600"
-                    : "text-blueGray-600 bg-white")
+                  "text-lg font-bold uppercase px-5 py-3 block leading-normal w-full  " +
+                  (openTab === 3 ? " border-b-2  border-black " : " bg-white")
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -64,44 +62,21 @@ const Tabs = ({ children }) => {
                 href="#link3"
                 role="tablist"
               >
-                Options
+                Saved Jobs
               </a>
             </li>
           </ul>
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+          <div className="relative flex flex-col min-w-0 break-words bg-gray-50 w-full rounded">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <p>
-                    Completely synergize resource taxing relationships via
-                    premier niche markets. Professionally cultivate one-to-one
-                    customer service with robust ideas.
-                    <br />
-                    <br />
-                    Dynamically innovate resource-leveling customer service for
-                    state of the art customer service.
-                  </p>
+                  <ContentOne />
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <p>
-                    Completely synergize resource taxing relationships via
-                    premier niche markets. Professionally cultivate one-to-one
-                    customer service with robust ideas.
-                    <br />
-                    <br />
-                    Dynamically innovate resource-leveling customer service for
-                    state of the art customer service.
-                  </p>
+                  <ContentTwo />
                 </div>
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  <p>
-                    Efficiently unleash cross-media information without
-                    cross-media value. Quickly maximize timely deliverables for
-                    real-time schemas.
-                    <br />
-                    <br /> Dramatically maintain clicks-and-mortar solutions
-                    without functional solutions.
-                  </p>
+                  <ContentThree />
                 </div>
               </div>
             </div>

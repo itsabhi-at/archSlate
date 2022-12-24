@@ -1,33 +1,37 @@
 import Image from "next/image";
+import Link from "next/link";
 import jobLogo from "./assets/jobLogo.png";
 import profilePic from "./assets/profilePic.png";
 function job() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-50">
       <main className="container mx-auto lg:px-36 pt-8">
-        <div className="text-xl font-roboto font-bold  flex items-center gap-2 mb-4">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M21 12L3 12"
-              stroke="#0F1420"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-            <path
-              d="M9 6L3 12L9 18"
-              stroke="#0F1420"
-              stroke-width="2"
-              stroke-linecap="round"
-            />
-          </svg>
-          Back to jobs
-        </div>
+        <Link href={"/"}>
+          <div className="text-xl font-roboto font-bold w-fit flex items-center gap-2 mb-4">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 12L3 12"
+                stroke="#0F1420"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M9 6L3 12L9 18"
+                stroke="#0F1420"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            Back to jobs
+          </div>
+        </Link>
+
         {/* head card  */}
         <section className="p-6 flex justify-between bg-white rounded-md mb-4 ">
           {/* left side part  */}

@@ -9,7 +9,7 @@ function Navbar() {
           <p className=" font-semibold font-lora text-[32px]">Archslate</p>
         </div>
         <ul className="flex gap-8 font-roboto font-bold text-[11px]">
-          <li className="flex flex-col justify-center items-center">
+          <li className="flex flex-col justify-center items-center cursor-pointer ">
             <svg
               width="24"
               height="24"
@@ -27,7 +27,7 @@ function Navbar() {
             </svg>
             Candidates
           </li>
-          <li className="flex flex-col justify-center items-center">
+          <li className="flex flex-col justify-center items-center cursor-pointer ">
             <svg
               width="24"
               height="24"
@@ -45,7 +45,7 @@ function Navbar() {
             </svg>
             Companies
           </li>
-          <li className="flex flex-col justify-center items-center">
+          <li className="flex flex-col justify-center items-center cursor-pointer ">
             <svg
               width="24"
               height="24"
@@ -63,7 +63,7 @@ function Navbar() {
             </svg>
             Jobs
           </li>
-          <li className="flex flex-col justify-center items-center">
+          <li className="flex flex-col justify-center items-center cursor-pointer ">
             <svg
               width="24"
               height="24"
@@ -81,7 +81,7 @@ function Navbar() {
             </svg>
             Notifications
           </li>
-          <li className="flex flex-col justify-center items-center">
+          <li className="flex flex-col justify-center items-center cursor-pointer ">
             <svg
               width="24"
               height="24"
