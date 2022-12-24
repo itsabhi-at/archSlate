@@ -7,7 +7,7 @@ export default function Example() {
     <div className="text-left">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button className="inline-flex w-[140px] font-bold justify-center border-[1.5px] border-black rounded-full bg-white bg-opacity-20 pl-8 pr-4 py-2 text-sm text-black hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          <Menu.Button className="inline-flex w-[140px] font-bold justify-center border-[1.5px] border-black rounded-full bg-white bg-opacity-20 pl-8 pr-4 py-2 text-normal text-black hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             On-site
             <svg
               className="absolute left-4"
